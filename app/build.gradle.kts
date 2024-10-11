@@ -21,17 +21,22 @@ android {
 
     buildTypes {
         release {
+            buildConfigField("String", "API_BASE_URL", "\"https://fakestoreapi.com\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"https://fakestoreapi.com\"")
+        }
     }
     buildFeatures {
         viewBinding = true
         //noinspection DataBindingWithoutKapt
         dataBinding = true
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

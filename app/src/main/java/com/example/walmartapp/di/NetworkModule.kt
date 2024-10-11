@@ -1,7 +1,7 @@
 package com.example.walmartapp.di
 
+import com.example.walmartapp.BuildConfig
 import com.example.walmartapp.repository.ServiceApi
-import com.example.walmartapp.utils.BASE_URL
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -37,7 +37,7 @@ class NetworkModule {
         gson: Gson
     ): ServiceApi =
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.API_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
             .build()
