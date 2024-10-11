@@ -1,8 +1,8 @@
 # Application Description
 The WalmartApp is an Android application designed to provide users with a seamless shopping experience by displaying a comprehensive list of products sourced from an external API. Leveraging modern architecture and best practices, this application incorporates features such as:
 
-## MVVM Architecture: 
-Utilizing the Model-View-ViewModel pattern for better separation of concerns, enhancing testability and maintainability.
+## Architecture: 
+Utilizing the MVVM pattern with clean architecture for better separation of concerns, enhancing testability and maintainability.
 
 ## Dependency Injection: 
 Implementing Dagger Hilt to manage dependencies, ensuring a clean and efficient codebase while facilitating easier testing.
